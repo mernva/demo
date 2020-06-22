@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_1882041_4dbu34erbv2.css">
+    <title>Message</title>
+    <style>
+        .container{
+            max-width: 800px;
+            box-shadow: 0 0 4px 0px rgba(0,0,0,0.3);
+            padding:10px 16px;
+            border-radius: 4px;
+            margin:30px auto;
+        }
+        .btns .button
+        {
+            font-size: 15px;
+            padding:10px 16px;
+            color:#303030;
+            border:1px solid #ccc;
+            border-radius: 4px;
+            line-height:2;
+            font-weight: 500;
+            background: white;
+            cursor: pointer;
+            outline:none;
+           
+        }
+        .button:hover{
+            border-color: lightskyblue;
+            color: lightskyblue;
+
+        }
+        .message{
+            background-color: #409eff;
+            display: flex;
+            align-items: center;
+            position: fixed;
+            top:10px;
+            left:50%;
+            color:#eee;
+            transform: translate(-50%,-50px);
+            font-size: 14px;
+            transition: all 0.3s;
+            opacity: 0;
+            padding:10px 16px;
+        }
+        .message.show{
+            transform: translate(-50%,5px);
+            opacity: 1;
+        }
+        .success{
+        background-color:#67c23A;
+        }
+        .message.warning{
+        background-color: #E6A23C;
+        }
+        .message.info{
+         background-color: #909399;
+        }
+        .message.error{
+         background-color: #F56C6C;
+        }
+        .message .iconfont{
+            margin-right: 6px;
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Message消息提示</h2>
+        <div class="btns">
+            <button class="button" id="btn-success">成功</button>
+            <button class="button" id="btn-warning">警告</button>
+            <button class="button" id="btn-message">消息</button>
+            <button class="button" id="btn-error">错误</button>
+        </div>
+    </div>
+    <script>
+        class Message{
+            constructor({type='success',text= ''}){
+                this.type=type
+                this.text=text
+
+                this.render()
+                this.bind()
+                
+            }
+            render(){
+              let $div =document.createElement('div')
+              this.$message = $div   //复制给this
+              $div.classList.add('message')
+              $div.classList.add(this.type)
+              let $icon = document.createElement('span')
+              $icon.classList.add('iconfont')
+              $icon.classList.add('icon-'+ this.type)
+              $div.appendChild($icon)
+              let $text=document.createTextNode(this.text)
+              $div.appendChild($text)
+              document.body.appendChild($div)
+            }
+            bind()
+            {
+                setTimeout(()=>this.show())
+                setTimeout(()=>this.destory(),3000)
+            }
+            show()
+            {
+            this.$message.classList.add('show')
+            
+            }
+            destory(){
+             this.$message.classList.remove('show')
+             setTimeout(()=>this.$message.parentNode.removeChild(this.$message),400)
+            }
+        }
+        document.querySelector('#btn-success').onclick=function(){
+          new Message({text:'我成功了'})
+        }
+        document.querySelector('#btn-warning').onclick=function(){
+          new Message({text:'我是警告',type:'warning'})
+        }
+        document.querySelector('#btn-message').onclick=function(){
+          new Message({text:'我是消息',type:'info'})
+        }
+        document.querySelector('#btn-error').onclick=function(){
+          new Message({text:'我是错误',type:'error'})
+        }
+    </script>
+</body>
+</html>
