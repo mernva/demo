@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="//at.alicdn.com/t/font_1656243_bpsdd4fip9e.css">
+        <title>百度一下，你就知道</title>
+        <style>
+       *
+        {
+            box-sizing:border-box;
+        }
+        .logo
+        {
+            background:url(https://www.baidu.com/img/bd_logo1.png) no-repeat center center;
+            width:270px;
+            height: 129px;
+            background-size: contain;
+            -webkit-background-size:contain;
+            margin:0px auto 30px auto;
+            clear: right;
+            top:100px;
+        }
+        .search
+        {
+            width:710px;
+            height: 36px;
+            margin:0 auto;
+            }
+        .left
+        {
+            border:1px solid #ccc;
+            position: relative;
+            display: inline-block;
+            width:600px;
+            height:36px;
+            margin-right: 0px;
+            border-right-width:0px;
+        }
+        .left>input
+        {
+            padding:4px 60px 4px 0px;
+            border: none;
+            width: 100%;
+            height: 100%;
+        }
+        .iconfont
+        {
+            font-size: 18px;
+        }
+        .icon-mic
+        {
+            position: absolute;
+            top:50%;
+            transform: translateY(-9px);
+            right:40px;
+            font-size: 18px;
+        }
+        .icon-camera
+        {
+            position:absolute;
+            top:50%;
+            right:10px;
+            transform: translateY(-9px);
+        }
+        /*.button
+        {
+            border:none;
+        }*/
+        .button>input
+        {
+            background-color: #3385ff;
+            width:100px;
+            height: 36px;
+            font-size: 20px;
+            color:white;
+            margin-left:-5px;
+            border:1px solid #3385ff;
+            transform:translateY(2px);
+        }
+        .QR
+        {
+            margin-top:180px;
+        }
+        .QR-image
+        {
+            background:url(https://dss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/home/img/qrcode/zbios_x2_5869f49.png) 0 0 no-repeat; 
+            background-size:contain;
+            padding:3px 3px;
+            width:106px;
+            height: 106px;
+            margin:0px auto 0 auto;
+    
+        }
+        .QR-text
+        {
+            text-align:center;
+            margin-top:-10px;
+        }
+        .QR-text>.text2
+        {
+            color:#ccc;
+            font-size:15px;
+            margin-top:-20px;
+        }
+        .bottom
+        {
+            text-align: center;
+            font-size: 12px;
+            color:#999;
+        }
+        .bottom1>li
+        {
+            list-style: none;
+            text-decoration: underline;
+            display: inline-block;
+            padding:10px;
+        }
+        .bottom1>.year
+        {
+            text-decoration: none;
+        }
+        .copyright
+        {
+            text-align: center;
+            font-size: 12px;
+            color:#999;
+            margin-top:-15px;
+        }
+        .copyright>a
+        {
+            color:#999;
+            list-style: none;
+          
+        }
+        .copyright>.icon1
+        {
+            display: inline-block;
+            width:20px;
+            height:20px;
+            background:url(/photo/icon1.png) no-repeat;
+            background-size:cover;
+            margin-left: -10px;
+            position: relative;
+            top:2px;
+            margin-right:10px;
+        }
+        .copyright>.icon2
+        {
+            display:inline-block;
+            width: 20px;
+            height: 25px;
+            background: url(/photo/icon2.png) no-repeat;
+            background-size:cover;
+            margin-left:-10px;
+            position: relative;
+            top:7px;
+        }
+        .nav
+        {
+            float: right;
+            font-size: 13px;
+            margin-top:10px;
+            margin-right: 10px;
+            margin-bottom: 20px;
+        }
+        .nav>a
+        {
+            color:black;
+            margin:5px 8px;
+            font-weight: bold;
+        }
+        .nav>.top
+        {
+            color:red;
+        }
+        .nav>a:hover
+        {
+            color:blue;
+        }
+        .nav>.top:hover
+        {
+             color:red;
+        }
+        .nav>.set,.nav>.login
+        {
+            font-weight: normal;
+        }
+        .nav>.product
+        {
+            text-decoration: none;
+            display: inline-block;
+            width:60px;
+            height:22px;
+            background:#3385ff;
+            text-align:center;
+            color:white;
+            font-weight: normal;
+        }
+        .nav>.lighter
+        {
+            display: inline-block;
+            position: relative;
+            font-weight: normal;
+            margin-bottom: 20px;
+        
+        }
+        .lighter ul
+        {
+            display: none;
+            list-style: none;
+            font-size: 13px;
+            overflow: hidden;
+        }
+        .lighter:hover ul
+        {
+            display: block;
+            background-color: white;
+            color:black;
+            border:2px solid #ddd;
+            font-weight: normal;
+            position:absolute;
+            top:cal(100%+30px);
+            margin-left: -20px;
+            padding:3px;
+            width: 70px;
+            text-align: center;
+        }
+        .lighter>ul::before
+        {
+            content:"";
+            position:absolute;
+            top:-18px;
+            left:25px;
+            border:10px solid #ddd;
+            border-top-color:transparent;
+            border-left-color:transparent;
+            border-right-color:transparent;
+            z-index: 1;
+        }
+
+        </style>
+    </head>
+    <body>
+        <div class="nav">
+                <a href="https://voice.baidu.com/act/newpneumonia/newpneumonia/?from=osari_pc_1" class="top">抗击肺炎</a>
+                <a href="http://news.baidu.com/">新闻</a>
+                <a href="https://www.hao123.com/">hao123</a>
+                <a href="https://map.baidu.com/@12788396.71,3540883.04,12z">地图</a>
+                <a href="http://v.baidu.com/">视频</a>
+                <a href="https://tieba.baidu.com/index.html">贴吧</a>
+                <a href="http://xueshu.baidu.com/">学术</a>
+                <a href="https://www.baidu.com/" class="login">登录</a>
+                <a href="#" class="lighter">设置
+                    <ul>
+                        <li>搜索设置</li>
+                        <li>高级搜索</li>
+                        <li>关闭搜索</li>
+                        <li>隐私设置</li>
+                    </ul>
+                </a>
+                <a href="#" class="product">更多产品</a>
+        </div>
+        <div class="logo"></div>
+        <div class="search">
+            <span class="left">
+                <input type="text">
+                <span class="iconfont icon-mic"></span>
+                <span class="iconfont icon-camera"></span>
+            </span>
+            <span class="button">
+                <input type="submit" name="submit" value="百度一下">
+            </span>    
+        </div>
+        <div class="QR">
+            <div class="QR-image"></div>
+            <div class="QR-text">
+                 <p class="text1">下载百度APP</p>
+                 <p class="text2">有事搜一搜  没事看一看</p>
+            </div>
+        </div>
+        <div class="bottom">
+                <ul class="bottom1">
+                    <li>把百度设为首页</li>
+                    <li>关于百度</li>
+                    <li>About  Baidu</li>
+                    <li>百度推广</li>
+                    <li class="year">(京)-经营性-2017-0020</li>
+                </ul>
+        </div>
+        <div class="copyright">
+            ©2020&nbspBaidu&nbsp
+            <a href="https://www.baidu.com/duty/">使用百度前必读</a>
+            <a href="http://jianyi.baidu.com/">意见反馈</a>
+            &nbsp;京ICP证030173号&nbsp;
+            <i class="icon1"></i>&nbsp;
+            <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11000002000001" target="_blank">京公网安备11000002000001号</a>&nbsp;
+            <i class="icon2"></i>
+        </div>
+    </body>
+</html>

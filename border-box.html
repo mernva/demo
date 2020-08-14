@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style>
+            *
+            {
+                margin:0;
+                padding:0;
+                box-sizing: border-box;
+            }
+            .modal
+            {
+                top:0;
+                left:0;
+                right:0;
+                bottom:0;
+                background: rgb(0,0,0,0.6);
+                display: none;
+                position:fixed;
+            }
+            .modal:target
+            {
+                display: block;
+            }
+            .modal .box
+            {
+                position:absolute;
+                top:50%;
+                left:50%;
+                transform: translate(-50%,-50%);
+                width:60%;
+                max-height:500px;
+                background:white;
+                border-radius: 4px;
+            }
+            .box>h2
+            {
+                border-bottom: 1px solid #ccc ;
+                padding:10px;
+            }
+            .box>h2>a
+            {
+                float: right;
+                text-decoration: none;
+                margin-top:0px;
+                margin-right: 5px;
+                color:black;
+                font-size:20px;
+            }
+            .box p
+            {
+                padding:10px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <a href="#modal1">点我</a>
+        <div class="modal" id="modal1">
+            <div class="box">
+                <h2>第一个标题<a href="#" class="closed">X</a></h2>
+                    <p>这是内容</p>
+                    <p>这是内容</p>
+                 </div>
+             </div>
+        </div>
+    </body>
+</html>
